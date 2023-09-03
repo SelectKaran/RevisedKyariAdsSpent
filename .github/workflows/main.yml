@@ -22,7 +22,7 @@ jobs:
           python-version: 3.x  # Change this to your desired Python version
 
       - name: Install dependencies
-        run: pip install pandas gspread gspread_dataframe oauth2client google-api-python-client tqdm
+        run: pip install pandas gspread gspread_dataframe oauth2client google-api-python-client tqdm openpyxl
 
       - name: Run Python code
         run: python AdsSpent.py
