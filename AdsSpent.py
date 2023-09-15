@@ -166,7 +166,3 @@ sorted_cat=SKU_df[["Child SKU","Parent Category","Child Category","Material","Pa
 final_sb_kyari=sorted_merge_sku.merge(sorted_cat,on=['Child SKU'],how='left')
 final_sb_kyari=final_sb_kyari[(final_sb_kyari["Impressions"]+final_sb_kyari["Clicks"]+final_sb_kyari["Spend"]+final_sb_kyari["Units"]+final_sb_kyari["Ads Sales"])>0].copy()
 final_sb_kyari["Date"]=final_sb_kyari["Date"].dt.date
-sheetKyariComb=gskyaricomb.worksheet('SB')
-sheetKyariComb.clear()
-sheetKyariComb.timeout =120
-set_with_dataframe(sheetKyariComb,final_sb_kyari)
